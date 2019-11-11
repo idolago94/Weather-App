@@ -1,0 +1,66 @@
+@import 'src/app/helpers/style-variables.scss';
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+
+    .input-box {
+        width: 90%;
+    }
+
+    .search-box {
+        display: flex;
+        height: 35px;
+        border-radius: 99px;
+
+        .search {
+            flex-grow: 1;
+            border: none;
+            border-top-left-radius: 18px;
+            border-bottom-left-radius: 18px;
+            padding: 15px;
+            height: 100%;
+            color: black;
+        }
+
+        .icon {
+            background-color: $input-background;
+            height: 100%;
+            padding: 5px;
+            border-top-right-radius: 18px;
+            border-bottom-right-radius: 18px;
+        }
+    }
+
+    .results-box {
+        display: none;
+        background-color: $input-background;
+        position: absolute;
+        width: 100%;
+        border-bottom-right-radius: 18px;
+        border-bottom-left-radius: 18px;
+        padding: 10px;
+        z-index: 999;
+    }
+}
+
+.box.results-open {
+    
+    .search-box {
+
+        .search {
+            border-bottom-left-radius: 0px;
+        }
+
+        .icon {
+            border-bottom-right-radius: 0px;
+        }
+    }
+
+    .results-box {
+        display: block;
+    }
+}

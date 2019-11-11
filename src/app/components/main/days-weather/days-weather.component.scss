@@ -1,0 +1,66 @@
+@import 'src/app/helpers/style-variables.scss';
+
+.forecast-weather-box {
+    padding: 10px;
+
+    .list-box {
+        display: flex;
+        align-items: center;
+
+        .day {
+            text-align: center;
+            padding: 5px;
+            margin: 4px;
+            width: 25%;
+            background-color: $sub-section-background;
+            letter-spacing: 1.2px;
+            font-weight: bold;
+            
+            .date {
+                
+            }
+
+            .icon {
+
+            }
+
+            .temprature {
+
+            }
+
+            .times-table {
+                padding: 2px;
+                font-size: 10px;
+                font-weight: normal;
+
+                .time-box {
+                    display: flex;
+                    padding: 5px;
+                    height: 50px;
+                    align-items: center;
+                    overflow: hidden;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.582);
+                    }
+
+                    & > * {
+                        margin: 2px;
+                    }
+
+                    .time {
+
+                    }
+
+                    .desc {
+
+                    }
+
+                    .icon {
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

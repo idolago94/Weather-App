@@ -1,0 +1,15 @@
+<div class="current-weather-box">
+  <div class="title-box">
+    <div class="location-name">{{location.name}}</div>
+    <img (click)="weatherSelected()" *ngIf="currentWeather" [src]="starIcon" class="star">
+  </div>
+  <img *ngIf="!currentWeather" [src]="loaderIcon" class="loader">
+  <div *ngIf="currentWeather" class="weather-box">
+    <div class="content-box">
+      <div class="celsius">{{ currentWeather.temp_c }}°</div>
+      <div class="feelslike">Feels like: {{ currentWeather.feelslike_c }}°</div>
+      <div class="description">{{ currentWeather.wx_desc }}</div>
+    </div>
+    <img [src]="weatherIcon" class="icon">
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div [class.results-open]="searchResults" class="box">
+  <div class="input-box">
+    <div class="search-box">
+      <input (keypress)="searchLocation($event)" #inputSearch type="text" class="search">
+      <img (click)="searchLocation()" [src]="inputIcon" class="icon">
+    </div>
+    <div class="results-box">
+      <app-result (click)="resultSelected(result)" *ngFor="let result of searchResults" [details]="result"></app-result>
+    </div>
+  </div>
+</div>

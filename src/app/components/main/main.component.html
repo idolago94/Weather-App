@@ -1,0 +1,13 @@
+<app-search></app-search>
+
+<div class="loader-box">
+  <img *ngIf="!location" [src]="loaderIcon" class="loader">
+</div>
+
+<section *ngIf="location">
+  <app-days-weather [location]="location" class="sub-section"></app-days-weather>
+  <app-current-weather [location]="location" class="sub-section"></app-current-weather>
+</section>
+
+<app-locations></app-locations>
+
