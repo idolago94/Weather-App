@@ -838,7 +838,7 @@ var GeographyService = /** @class */ (function () {
     function GeographyService(http) {
         this.http = http;
         this.API_KEY = '8087364e4c2b4cfd990e74f4726a28e7';
-        this.URL = 'api.opencagedata.com/geocode/v1/json';
+        this.URL = 'https://api.opencagedata.com/geocode/v1/json';
     }
     GeographyService.prototype.searchPlace = function (search) {
         return this.http.get(this.URL + "?q=" + search + "&key=" + this.API_KEY);
@@ -1052,7 +1052,7 @@ var WeatherService = /** @class */ (function () {
         this.http = http;
         this.APP_KEY = 'ddfb6e18b770b286e59ddd9bb73b5b45';
         this.APP_ID = 'ec0c996f';
-        this.URL = 'api.weatherunlocked.com';
+        this.URL = 'https://api.weatherunlocked.com';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' });
         this.locationSelected = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
     }
