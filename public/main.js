@@ -1052,7 +1052,7 @@ var WeatherService = /** @class */ (function () {
         this.http = http;
         this.APP_KEY = 'ddfb6e18b770b286e59ddd9bb73b5b45';
         this.APP_ID = 'ec0c996f';
-        this.URL = ' https://api.weatherunlocked.com';
+        this.URL = ' http://api.weatherunlocked.com';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' });
         this.locationSelected = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
     }
