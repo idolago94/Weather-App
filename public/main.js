@@ -1137,9 +1137,9 @@ var ToastComponent = /** @class */ (function () {
         this.toastService.showToast.subscribe(function (msg) {
             _this.toastContent = msg;
             _this.toastShow = true;
-            // setTimeout(() => {
-            //   this.toastShow = false;
-            // }, 5000);
+            setTimeout(function () {
+                _this.toastShow = false;
+            }, 5000);
         });
     };
     ToastComponent = __decorate([
@@ -1454,7 +1454,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var LocationsService = /** @class */ (function () {
     function LocationsService(http) {
         this.http = http;
-        this.url = 'http://dataservice.accuweather.com/locations/v1';
+        this.url = 'https://dataservice.accuweather.com/locations/v1';
         this.API_KEY = 'oM2dep6TrQA07ALL4kxnFdBxdmj10zcy';
     }
     LocationsService.prototype.searchLocation = function (searchWord) {
@@ -1615,7 +1615,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var WeatherService = /** @class */ (function () {
     function WeatherService(http) {
         this.http = http;
-        this.weatherUrl = 'http://dataservice.accuweather.com/forecasts/v1';
+        this.weatherUrl = 'https://dataservice.accuweather.com/forecasts/v1';
         this.API_KEY = 'oM2dep6TrQA07ALL4kxnFdBxdmj10zcy';
     }
     WeatherService.prototype.getCurrentWeather = function (locationKey) {
