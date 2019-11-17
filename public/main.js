@@ -56,42 +56,22 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_weather_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/weather.service */ "./src/app/services/weather.service.ts");
-/* harmony import */ var _services_locations_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/locations.service */ "./src/app/services/locations.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(weatherService, locationService, http) {
-        this.weatherService = weatherService;
-        this.locationService = locationService;
-        this.http = http;
+    function AppComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.http.get('/app-key').subscribe(function (key) {
-            _this.weatherService.setApiKey(key);
-            _this.locationService.setApiKey(key);
-        });
-    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
-        }),
-        __metadata("design:paramtypes", [_services_weather_service__WEBPACK_IMPORTED_MODULE_1__["WeatherService"], _services_locations_service__WEBPACK_IMPORTED_MODULE_2__["LocationsService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+        })
     ], AppComponent);
     return AppComponent;
 }());
@@ -1474,11 +1454,8 @@ var LocationsService = /** @class */ (function () {
     function LocationsService(http) {
         this.http = http;
         this.url = 'https://dataservice.accuweather.com/locations/v1';
-        this.API_KEY = '';
+        this.API_KEY = 'oM2dep6TrQA07ALL4kxnFdBxdmj10zcy';
     }
-    LocationsService.prototype.setApiKey = function (key) {
-        this.API_KEY = key;
-    };
     LocationsService.prototype.searchLocation = function (searchWord) {
         return this.http.get(this.url + "/cities/autocomplete?apikey=" + this.API_KEY + "&q=" + searchWord);
     };
@@ -1638,11 +1615,8 @@ var WeatherService = /** @class */ (function () {
     function WeatherService(http) {
         this.http = http;
         this.weatherUrl = 'https://dataservice.accuweather.com/forecasts/v1';
-        this.API_KEY = '';
+        this.API_KEY = 'oM2dep6TrQA07ALL4kxnFdBxdmj10zcy';
     }
-    WeatherService.prototype.setApiKey = function (key) {
-        this.API_KEY = key;
-    };
     WeatherService.prototype.getCurrentWeather = function (locationKey) {
         return this.http.get(this.weatherUrl + "/hourly/1hour/" + locationKey + "?apikey=" + this.API_KEY);
     };
