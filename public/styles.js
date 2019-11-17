@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "body {\n  width: 98vw;\n  background: url('wallpaper.jpg');\n  background-size: cover; }\n\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-family: 'Source Sans Pro', sans-serif;\n  color: white; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9DOlxcVXNlcnNcXFVzZXJcXERlc2t0b3BcXEZ1bGwgU3RhY2sgRGV2ZWxvcGVyXFx3ZWF0aGVyLWFwcC9zcmNcXHN0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksWUFBVztFQUNYLGlDQUF1QztFQUN2Qyx1QkFBc0IsRUFDekI7O0FBRUQ7RUFDSSx1QkFBc0I7RUFDdEIsVUFBUztFQUNULFdBQVU7RUFDViwyQ0FBMEM7RUFDMUMsYUFBWSxFQUNmIiwiZmlsZSI6InNyYy9zdHlsZXMuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICAgIHdpZHRoOiA5OHZ3O1xuICAgIGJhY2tncm91bmQ6IHVybCgnYXNzZXRzL3dhbGxwYXBlci5qcGcnKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOyBcbn1cblxuKiB7XG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgICBtYXJnaW46IDA7XG4gICAgcGFkZGluZzogMDtcbiAgICBmb250LWZhbWlseTogJ1NvdXJjZSBTYW5zIFBybycsIHNhbnMtc2VyaWY7XG4gICAgY29sb3I6IHdoaXRlO1xufSJdfQ== */", '', '']]
+module.exports = [[module.i, "body {\n  height: 100vh;\n  width: 100vw;\n  overflow-x: hidden;\n  font-size: 10px;\n  background-image: url('wallpaper.jpg');\n  background-size: cover; }\n\n* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  font-family: 'Barlow', sans-serif; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9DOlxcVXNlcnNcXFVzZXJcXERlc2t0b3BcXEZ1bGwgU3RhY2sgRGV2ZWxvcGVyXFxoZXJvbG8tYXNzaWdubWVudC9zcmNcXHN0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksY0FBYTtFQUNiLGFBQVk7RUFDWixtQkFBa0I7RUFDbEIsZ0JBQWU7RUFDZix1Q0FBNkM7RUFDN0MsdUJBQXNCLEVBQ3pCOztBQUVEO0VBQ0ksV0FBVTtFQUNWLFVBQVM7RUFDVCx1QkFBc0I7RUFDdEIsa0NBQWlDLEVBQ3BDIiwiZmlsZSI6InNyYy9zdHlsZXMuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICAgIGhlaWdodDogMTAwdmg7XG4gICAgd2lkdGg6IDEwMHZ3O1xuICAgIG92ZXJmbG93LXg6IGhpZGRlbjtcbiAgICBmb250LXNpemU6IDEwcHg7IFxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnYXNzZXRzL3dhbGxwYXBlci5qcGcnKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufVxuXG4qIHtcbiAgICBwYWRkaW5nOiAwO1xuICAgIG1hcmdpbjogMDtcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICAgIGZvbnQtZmFtaWx5OiAnQmFybG93Jywgc2Fucy1zZXJpZjtcbn1cbiJdfQ== */", '', '']]
 
 /***/ }),
 
@@ -555,7 +555,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\User\Desktop\Full Stack Developer\weather-app\src\styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! C:\Users\User\Desktop\Full Stack Developer\herolo-assignment\src\styles.scss */"./src/styles.scss");
 
 
 /***/ })
