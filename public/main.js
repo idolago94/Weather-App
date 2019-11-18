@@ -1454,7 +1454,7 @@ var LocationsService = /** @class */ (function () {
     function LocationsService(http) {
         this.http = http;
         this.url = 'https://dataservice.accuweather.com/locations/v1';
-        this.API_KEY = 'oM2dep6TrQA07ALL4kxnFdBxdmj10zcy';
+        this.API_KEY = 'Em5cfBiARlZWkSrZOWYm2Buvhk5XAsFB';
     }
     LocationsService.prototype.searchLocation = function (searchWord) {
         return this.http.get(this.url + "/cities/autocomplete?apikey=" + this.API_KEY + "&q=" + searchWord);
@@ -1615,7 +1615,7 @@ var WeatherService = /** @class */ (function () {
     function WeatherService(http) {
         this.http = http;
         this.weatherUrl = 'https://dataservice.accuweather.com/forecasts/v1';
-        this.API_KEY = 'oM2dep6TrQA07ALL4kxnFdBxdmj10zcy';
+        this.API_KEY = 'Em5cfBiARlZWkSrZOWYm2Buvhk5XAsFB';
     }
     WeatherService.prototype.getCurrentWeather = function (locationKey) {
         return this.http.get(this.weatherUrl + "/hourly/1hour/" + locationKey + "?apikey=" + this.API_KEY);
