@@ -608,7 +608,7 @@ var MainComponent = /** @class */ (function () {
     };
     MainComponent.prototype.findMe = function () {
         var _this = this;
-        if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(function (position) {
             navigator.geolocation.getCurrentPosition(function (position) {
                 var currentPosition = {
                     lat: position.coords.latitude,
@@ -621,10 +621,9 @@ var MainComponent = /** @class */ (function () {
                     _this.toastService.handleError(err);
                 });
             });
-        }
-        else {
-            alert("Geolocation is not supported by this browser.");
-        }
+        }, function (error) {
+            _this.toastService.handleError(error);
+        });
     };
     MainComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -927,7 +926,7 @@ var WeekWeatherComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"nav\">\n  <div class=\"header\">\n    <app-logo></app-logo>\n    <div [routerLink]=\"appRoutes.MAIN\" class=\"btn-box\">\n      <img [src]=\"targetIcon\" class=\"current btn\">\n    </div>\n    <div  class=\"btn-box\">\n      <img (click)=\"settingsClick()\" [src]=\"settingsIcon\" class=\"settings btn\">\n      <div *ngIf=\"openSettings\" class=\"settings-box\">\n        <div class=\"option-box\">\n          <div class=\"label\">unit:</div>\n          <app-toggle></app-toggle>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"tabs-box\">\n    <div class=\"tab-box\"><a [routerLink]=\"appRoutes.MAIN\" class=\"tab\">{{appRoutes.MAIN}}</a></div>\n    <div class=\"tab-box\"><a [routerLink]=\"appRoutes.FAVOURITE\" class=\"tab\">{{appRoutes.FAVOURITE}}</a></div>\n  </div>\n\n  <div class=\"menu-mobile-box\">\n    <img (click)=\"mobileMenuClick()\" *ngIf=\"!mobileMenuOpen\" [src]=\"menuIcon\" class=\"menu-icon\">\n    <div [class.open]=\"mobileMenuOpen\" class=\"menu-content\">\n      <div (click)=\"mobileMenuClick()\" class=\"background-box\"></div>\n      <div class=\"side-menu\">\n        <div class=\"close-box\">\n          <app-logo [mobile]=\"true\"></app-logo>\n          <img (click)=\"mobileMenuClick()\" [src]=\"closeIcon\" class=\"close\">\n        </div>\n      <div class=\"tabs-box\">\n        <div class=\"tab-box\"><a (click)=\"mobileMenuClick()\" [routerLink]=\"appRoutes.MAIN\" class=\"tab\">{{appRoutes.MAIN}}</a></div>\n        <div class=\"tab-box\"><a (click)=\"mobileMenuClick()\" [routerLink]=\"appRoutes.FAVOURITE\" class=\"tab\">{{appRoutes.FAVOURITE}}</a></div>\n      </div>\n      <div class=\"settings-box\">\n        <div class=\"option-box\">\n          <div class=\"label\">unit:</div>\n          <app-toggle></app-toggle>\n        </div>\n      </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"nav\">\n  <div class=\"header\">\n    <app-logo></app-logo>\n    <div [routerLink]=\"appRoutes.MAIN\" class=\"btn-box\">\n      <img [src]=\"targetIcon\" class=\"current btn\">\n    </div>\n    <div  class=\"btn-box\">\n      <img (click)=\"settingsClick()\" [src]=\"settingsIcon\" class=\"settings btn\">\n      <div *ngIf=\"openSettings\" class=\"settings-box\">\n        <div class=\"option-box\">\n          <div class=\"label\">unit:</div>\n          <app-toggle></app-toggle>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"tabs-box\">\n    <div class=\"tab-box\"><a [routerLink]=\"appRoutes.MAIN\" class=\"tab\">{{appRoutes.MAIN}}</a></div>\n    <div class=\"tab-box\"><a [routerLink]=\"appRoutes.FAVOURITE\" class=\"tab\">{{appRoutes.FAVOURITE}}</a></div>\n  </div>\n\n  <div class=\"menu-mobile-box\">\n    <img (click)=\"mobileMenuClick()\" *ngIf=\"!mobileMenuOpen\" [src]=\"menuIcon\" class=\"menu-icon\">\n    <div [class.open]=\"mobileMenuOpen\" class=\"menu-content\">\n      <div (click)=\"mobileMenuClick()\" class=\"background-box\"></div>\n      <div class=\"side-menu\">\n        <div class=\"close-box\">\n          <app-logo [mobile]=\"true\"></app-logo>\n          <img (click)=\"mobileMenuClick()\" [src]=\"closeIcon\" class=\"close\">\n        </div>\n      <div class=\"tabs-box\">\n        <div class=\"tab-box\"><a (click)=\"mobileMenuClick()\" [routerLink]=\"appRoutes.MAIN\" class=\"tab\">{{appRoutes.MAIN}}</a></div>\n        <div class=\"tab-box\"><a (click)=\"mobileMenuClick()\" [routerLink]=\"appRoutes.FAVOURITE\" class=\"tab\">{{appRoutes.FAVORITE}}</a></div>\n      </div>\n      <div class=\"settings-box\">\n        <div class=\"option-box\">\n          <div class=\"label\">unit:</div>\n          <app-toggle></app-toggle>\n        </div>\n      </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1356,7 +1355,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAIN", function() { return MAIN; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FAVOURITE", function() { return FAVOURITE; });
 var MAIN = 'main';
-var FAVOURITE = 'favourite';
+var FAVOURITE = 'favorite';
 
 
 /***/ }),
